@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Library with AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <script src="script.js"></script>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i>📚</i>
+                <span>Digital Library AI</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-link">Home</a></li>
+                    <li><a href="#" id="catalog-link">Catalog</a></li>
+                    <li><a href="#" id="reading-link">My Reading</a></li>
+                    <li><a href="#" id="recommendations-link">Recommendations</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle">🌙</button>
+            <button class="high-contrast-toggle" id="high-contrast-toggle">♿</button>
+        </div>
+    </header>
+
+    <div class="librarian-mode">
+        <button class="librarian-toggle" id="librarian-toggle">Librarian Mode</button>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-box" id="search-input" placeholder="Search for books...">
+        <div class="filter-container">
+            <select id="genre-filter">
+                <option value="">All Genres</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-fiction">Non-fiction</option>
+                <option value="Science">Science</option>
+                <option value="History">History</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Biography">Biography</option>
+                <option value="Self-help">Self-help</option>
+            </select>
+            <select id="sort-by">
+                <option value="title">Sort by Title</option>
+                <option value="author">Sort by Author</option>
+                <option value="rating">Sort by Rating</option>
+                <option value="recent">Recently Added</option>
+            </select>
+        </div>
+    </div>
+
+    <main>
+        <h1>Welcome to Digital Library AI</h1>
+        <p>Discover thousands of books with our intelligent assistant and personalized recommendations.</p>
+        
+        <div class="book-grid" id="book-grid">
+            <!-- Books will be dynamically loaded here -->
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading books...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Book Detail Modal -->
+    <div class="modal" id="book-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-book-modal">&times;</button>
+            <div class="book-detail-container" id="book-detail-content">
+                <!-- Book details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Reading Modal -->
+    <div class="modal" id="reading-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-reading-modal">&times;</button>
+            <div class="reading-container" id="reading-content">
+                <!-- Reading content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Questionnaire Modal -->
+    <div class="modal" id="questionnaire-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-questionnaire-modal">&times;</button>
+            <div class="questionnaire-container" id="questionnaire-content">
+                <!-- Questionnaire content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Assistant Widget -->
+    <div class="ai-assistant" id="ai-assistant">
+        <div class="ai-header" id="ai-header">
+            <span>📚 Library AI Assistant</span>
+            <button class="ai-toggle" id="ai-toggle">−</button>
+        </div>
+        <div class="ai-body" id="ai-body">
+            <div class="ai-messages" id="ai-messages">
+                <div class="message ai-message">
+                    Hello! I'm your Library AI Assistant. How can I help you today? You can ask me about books, get recommendations, or ask about library services.
+                </div>
+            </div>
+            <div class="ai-input">
+                <input type="text" placeholder="Ask me anything about books..." id="ai-input">
+                <button id="ai-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Digital Library AI. All rights reserved.</p>
+        <p>Designed with ❤️ for book lovers everywhere.</p>
+    </footer>
+
+    
+</body>
+</html>
